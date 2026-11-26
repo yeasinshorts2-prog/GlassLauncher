@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="40dp"
+    android:paddingBottom="16dp"
+    android:paddingHorizontal="16dp">
+
+    <!-- ঘড়ি এবং তারিখ কার্ড -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/glass_card"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp">
+
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="hh:mm a"
+            android:format24Hour="HH:mm"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:shadowColor="#80000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4" />
+
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="EEEE, dd MMMM yyyy"
+            android:format24Hour="EEEE, dd MMMM yyyy"
+            android:textColor="#E0E0E0"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- সার্চ বার -->
+    <EditText
+        android:id="@+id/searchBox"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/glass_card"
+        android:hint="অ্যাপ খুঁজুন..."
+        android:textColorHint="#CCCCCC"
+        android:textColor="#FFFFFF"
+        android:paddingHorizontal="16dp"
+        android:singleLine="true"
+        android:layout_marginBottom="12dp" />
+
+    <!-- সব অ্যাপের গ্রিড -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/appsGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/glass_card"
+        android:padding="8dp" />
+
+</LinearLayout>
